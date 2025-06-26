@@ -1,0 +1,545 @@
+/* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  overflow-x: hidden;
+}
+*::selection {
+  color: #fff;
+  background-color: #000;
+}
+body::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #8f8d8d;
+}
+
+/* ===== Navigation Bar ===== */
+#nav {
+  position: fixed;
+  width: 100%;
+  padding: 30px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9;
+}
+#nav img {
+  width: 120px;
+}
+#nav #right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+#nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+#nav i {
+  margin-top: 3px;
+  font-size: 24px;
+}
+
+/* ===== Sidebar ===== */
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 100vh;
+  background-color: #f7f7f7;
+  z-index: 1001;
+  padding: 40px;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+#sidebar .navlinks h4 {
+  font-size: 40px;
+  color: #000;
+  font-weight: 400;
+}
+#sidebar .navlinks a {
+  text-decoration: none;
+  margin: 20px 0;
+}
+#sidebar #cross {
+  position: absolute;
+  top: 8%;
+  right: 10%;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+/* ===== Main Section ===== */
+#main {
+  width: 100%;
+  background: #fff;
+}
+
+/* ===== Home Section ===== */
+#home {
+  width: 100%;
+  min-height: 100vh;
+}
+#home #homemain {
+  width: 100%;
+  padding: 15vw 15vw;
+}
+#homemain h5 {
+  font-weight: 500;
+  font-size: 30px;
+  letter-spacing: -0.1vw;
+}
+.headings {
+  display: flex;
+  gap: 30px;
+}
+#homemain .headings h1 {
+  font-size: 110px;
+  letter-spacing: -2px;
+  font-weight: 700;
+  line-height: 2;
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+#homemain .headings h1:hover {
+  color: #000;
+}
+#homeend {
+  padding: 5vw 15vw;
+}
+#homeend p {
+  width: 70%;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: -0.08vw;
+}
+
+/* ===== Featured Section ===== */
+#featured {
+  padding: 10vw 15vw;
+}
+.fheading h1 {
+  font-size: 4vw;
+  line-height: 1;
+  font-weight: 400;
+}
+.fheading > h1:nth-child(2) {
+  color: transparent;
+  -webkit-text-stroke: 1px #000;
+}
+#fimages {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  margin-top: 5vw;
+}
+#fleft {
+  overflow: hidden;
+  width: 45%;
+  height: inherit;
+}
+.fleftelem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: inherit;
+}
+.fleftelem h1 {
+  font-size: 2.5vw;
+  font-weight: 400;
+  margin: 1.5vw 0;
+  text-transform: capitalize;
+}
+.fleftelem h3 {
+  font-size: 1.3vw;
+  font-weight: 400;
+}
+.fleftelem h4 {
+  opacity: 0.5;
+}
+#fright {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 45%;
+  height: inherit;
+}
+#fright .images {
+  width: 90%;
+  height: 90%;
+}
+#fright .images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn button {
+  padding: 22px 40px;
+  border-radius: 100px;
+  border: 2px solid #e6e6e6;
+  background-color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin-top: 10px;
+}
+.btn-white {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 40px;
+  border-radius: 100px;
+  border: 2px solid #e6e6e6;
+  background: transparent;
+  width: 400px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin-top: 15px;
+}
+.left a, .right a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ===== Developer Section ===== */
+#dev {
+  width: 100%;
+  padding: 5vw 15vw;
+}
+#dev h1 {
+  font-size: 3.8vw;
+  font-weight: 400;
+  width: 60%;
+  line-height: 1;
+}
+#dev p {
+  font-size: 1.5vw;
+  margin-top: 3vw;
+  letter-spacing: -0.5px;
+  width: 60%;
+}
+
+/* ===== Slides Section ===== */
+#slides {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 30px;
+  width: 100%;
+  padding: 5vw 8vw;
+}
+.slide {
+  display: flex;
+  flex-direction: column;
+}
+.slide .img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+.slide .img img {
+  width: 100%;
+  height: 100%;
+}
+.slide .tag {
+  padding: 10px 22px;
+  margin: 10px 0;
+  background-color: #f5f5f5;
+  width: fit-content;
+}
+.slide h3 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+/* ===== Footer ===== */
+#footer {
+  min-height: 70vh;
+  width: 100%;
+  background-color: #000;
+  margin-top: 30px;
+}
+#footer .scroller {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: #111;
+  color: white;
+}
+#footer .scroll-track {
+  display: inline-flex;
+  animation: scroller 8s linear infinite;
+  gap: 2rem;
+  align-items: center;
+}
+#footer h1, #footer i {
+  font-size: 110px;
+  letter-spacing: -2px;
+  font-weight: 700;
+  line-height: 2;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+#footer .social h2 {
+  font-size: 35px;
+  color: #fff;
+}
+#footer .social a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+}
+#footer .social .links {
+  position: relative;
+  overflow: hidden;
+}
+#footer .social .links a {
+  position: relative;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  display: block;
+  padding: 25px 0;
+  color: inherit;
+}
+#footer .social h2 {
+  font-size: 30px;
+  padding-left: 25px;
+  z-index: 2;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+#footer .overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  align-items: center;
+  padding: 0 3vw;
+  gap: 55px;
+  transition: top 0.4s ease;
+  z-index: 1;
+}
+#footer .overlay h3,
+#footer .overlay i {
+  font-size: 30px;
+}
+#footer .overlay i {
+  font-size: 50px;
+  color: #000;
+  font-weight: 900;
+}
+#footer .social .links:hover .overlay {
+  top: 0;
+}
+#footer .social .links:hover h2 {
+  transform: translateY(-100%);
+}
+
+/* ===== Footer Contact Section ===== */
+#footer .contact {
+  padding: 25px 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+#footer .contact .left,
+#footer .contact .right {
+  width: 45%;
+  padding: 5px;
+}
+.left h5, .right h5 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #fff;
+}
+.left h3, .right h3 {
+  font-size: 26px;
+  font-weight: 400;
+  color: #fff;
+}
+.btn-white {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ===== Keyframes ===== */
+@keyframes scroller {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== Responsive Breakpoints ===== */
+@media (max-width: 1280px) {
+  #home #homemain {
+    padding: 20vw 10vw;
+  }
+  #homemain .headings h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1080px) {
+  #nav a, #nav i {
+    font-size: 20px;
+  }
+  #sidebar .navlinks h4 {
+    font-size: 30px;
+  }
+  #home #homemain {
+    padding: 15vw 12vw;
+  }
+  #homemain .headings h1 {
+    font-size: 50px;
+  }
+  #featured {
+    padding: 10vw 12vw;
+  }
+  #dev {
+    padding: 5vw 12vw;
+  }
+  #slides {
+    grid-template-columns: 1fr;
+  }
+  .btn button {
+    padding: 18px 36px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  #nav a, #nav i {
+    font-size: 18px;
+  }
+  #sidebar .navlinks h4 {
+    font-size: 25px;
+  }
+  #home #homemain {
+    padding: 35vw 15vw;
+  }
+  #homemain .headings h1 {
+    font-size: 45px;
+  }
+  #homeend {
+    padding: 1vw 15vw;
+  }
+  #homeend p {
+    width: 85%;
+    font-size: 20px;
+  }
+  #fright .images {
+    height: 70%;
+  }
+  .btn button {
+    padding: 16px 30px;
+    font-size: 14px;
+  }
+  #footer .contact {
+    flex-direction: column;
+    padding: 20px 15px;
+    gap: 30px;
+  }
+  #footer .contact .left,
+  #footer .contact .right {
+    width: 100%;
+  }
+  .left h3, .right h3 {
+    font-size: 20px;
+  }
+  .left h5, .right h5 {
+    font-size: 18px;
+  }
+  .btn-white {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  #homemain .headings h1 {
+    font-size: 38px;
+  }
+  #homeend p {
+    font-size: 18px;
+  }
+  .btn button {
+    padding: 14px 24px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  #nav a, #nav i {
+    font-size: 16px;
+  }
+  #homemain .headings h1 {
+    font-size: 30px;
+  }
+  #homeend p {
+    font-size: 16px;
+  }
+  .btn button {
+    padding: 12px 20px;
+    font-size: 12px;
+  }
+}
