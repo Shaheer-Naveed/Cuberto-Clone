@@ -34,6 +34,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   justify-content: space-between;
   z-index: 9;
+  background-color: #ffffffb2;
 }
 #nav img {
   width: 120px;
@@ -131,7 +132,7 @@ body::-webkit-scrollbar-thumb {
   gap: 30px;
 }
 #homemain .headings h1 {
-  font-size: 110px;
+  font-size: 120px;
   letter-spacing: -2px;
   font-weight: 700;
   line-height: 2;
@@ -154,15 +155,19 @@ body::-webkit-scrollbar-thumb {
 /* ===== Featured Section ===== */
 #featured {
   padding: 10vw 15vw;
+  background-color: #000;
+  border-radius: 25px 25px 0 0;
+
 }
 .fheading h1 {
   font-size: 4vw;
   line-height: 1;
   font-weight: 400;
+  color: #fff;
 }
 .fheading > h1:nth-child(2) {
   color: transparent;
-  -webkit-text-stroke: 1px #000;
+  -webkit-text-stroke: 1px #fff;
 }
 #fimages {
   display: flex;
@@ -188,13 +193,16 @@ body::-webkit-scrollbar-thumb {
   font-weight: 400;
   margin: 1.5vw 0;
   text-transform: capitalize;
+  color: #fff;
 }
 .fleftelem h3 {
   font-size: 1.3vw;
   font-weight: 400;
+  color: #fff;
 }
 .fleftelem h4 {
   opacity: 0.5;
+  color: #fff;
 }
 #fright {
   display: flex;
@@ -204,15 +212,17 @@ body::-webkit-scrollbar-thumb {
   height: inherit;
 }
 #fright .images {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
 }
 #fright .images img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
+#featured #fimagesmobile{
+  display: none;
+}
 /* ===== Buttons ===== */
 .btn {
   display: flex;
@@ -469,36 +479,99 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 768px) {
-  #nav a, #nav i {
+  #nav{
+    width: 100%;
+    padding: 25px 30px;
+  }
+  #nav #right a{
+    display:none;
+  }
+  #nav i {
     font-size: 18px;
+  }
+  #nav img {
+    width: 80px;
+  }
+  #sidebar {
+    right: -60%;
+    width: 60%;
   }
   #sidebar .navlinks h4 {
     font-size: 25px;
   }
   #home #homemain {
-    padding: 35vw 15vw;
+    padding: 35vw 10vw;
+  }
+  #homemain h5 {
+    font-size: 23px;
   }
   #homemain .headings h1 {
-    font-size: 45px;
+    font-size: 25px;
   }
   #homeend {
-    padding: 1vw 15vw;
+    padding: 1vw 10vw;
   }
   #homeend p {
     width: 85%;
-    font-size: 20px;
+    font-size: 16px;
   }
-  #fright .images {
-    height: 70%;
+  #featured {
+    padding: 10vw;
+    background-color: #000;
+    border-radius: 25px 25px 0 0;
+  }
+  .fheading h1 {
+    font-size: 6vw;
+    color: #fff;
+  }
+  .fheading > h1:nth-child(2) {
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+  }
+  #fimages {
+    display: none;
+  }
+  #featured #fimagesmobile{
+    display: block;
+    color: #fff;
+  }
+  #fimagesmobile .project{
+    margin: 30px 0;
+  }
+  #fimagesmobile .project img{
+    width: 100%;
+    height: 50%;
+  }
+  #fimagesmobile .project h1{
+    font-size: 5vw;
+    font-weight: 400;
+  }
+  #fimagesmobile .project h3{
+    font-size: 3.3vw;
+    font-weight: 400;
+  }
+  #fimagesmobile .project h4{
+    opacity: 0.5;
   }
   .btn button {
     padding: 16px 30px;
     font-size: 14px;
   }
+  #dev h1 {
+    font-size: 5.3vw;
+    width: 80%;
+  }
+  #dev p{
+    font-size: 3.3vw;
+    width: 80%;
+  }
   #footer .contact {
     flex-direction: column;
     padding: 20px 15px;
     gap: 30px;
+  }
+  #footer .contact a{
+    width:100%;
   }
   #footer .contact .left,
   #footer .contact .right {
@@ -513,33 +586,6 @@ body::-webkit-scrollbar-thumb {
   .btn-white {
     font-size: 14px;
   }
+
 }
 
-@media (max-width: 576px) {
-  #homemain .headings h1 {
-    font-size: 38px;
-  }
-  #homeend p {
-    font-size: 18px;
-  }
-  .btn button {
-    padding: 14px 24px;
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 400px) {
-  #nav a, #nav i {
-    font-size: 16px;
-  }
-  #homemain .headings h1 {
-    font-size: 30px;
-  }
-  #homeend p {
-    font-size: 16px;
-  }
-  .btn button {
-    padding: 12px 20px;
-    font-size: 12px;
-  }
-}
